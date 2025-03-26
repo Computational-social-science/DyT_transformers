@@ -1,2 +1,5 @@
 # DyT_transformers
-Evalution of DynamicTanh (DyT), an element-wise operation DyT(x) = tanh(αx), as a drop-in replacement for normalization layers in Transformers. 
+Evalution of **DynamicTanh(DyT)**, an element-wise operation DyT(x) = tanh(αx), as a drop-in replacement for normalization layers in Transformers. 
+
+
+**Figure 1**. Meta proposes Evalution of **DynamicTanh(DyT)**, an element-wise operation DyT(x) = tanh(αx), as a drop-in replacement for normalization layers in Transformers. , an element-wise operation defined as: DyT(x) = tanh(αx), where α is a learnable scaler. DyT is designed to replace normalization layers in Transformers. Models with DyT achieves similar or better performance than their normalized counterparts.
