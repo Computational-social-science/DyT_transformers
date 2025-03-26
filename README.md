@@ -9,7 +9,7 @@ Meta propose Dynamic Tanh (DyT), an element-wise operation defined as: DyT(x) = 
 
 ## Comprehensive Evalution
 Here we present a comprehensive framework for evaluting the pros and cons of Dynamic Tanh (DyT) aginst the vanilla Transformers.
-<img src="https://github.com/Computational-social-science/DyT_transformers/blob/main/before_after.svg" />
+<img src="[https://github.com/Computational-social-science/DyT_transformers/blob/main/before_after.svg](https://github.com/Computational-social-science/DyT_transformers/blob/main/transformer_comparison.svg)" />
 
 ## Acknowledgement
 This repository is built using the DyT (https://github.com/jiachenzhu/DyT) library.
