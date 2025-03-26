@@ -1,4 +1,4 @@
-# DyT_transformers Evalution
+# Evalution: Transformer (Layer Norm) vs Transformer (DyT)
 
 ## DyT Overview
 Meta propose Dynamic Tanh (DyT), an element-wise operation defined as: DyT(x) = tanh(αx), where α is a learnable scaler. DyT is designed to replace normalization layers in Transformers. Models with DyT achieves similar or better performance than their normalized counterparts.
