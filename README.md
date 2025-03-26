@@ -10,7 +10,6 @@ Meta proposes Dynamic Tanh (DyT), an element-wise operation defined as: DyT(x) =
 
 ## Implementation
 Meta's DyT module can be implemented in 9 lines of PyTorch code:
-
 class DyT(nn.Module):
     def __init__(self, num_features, alpha_init_value=0.5):
         super().__init__()
