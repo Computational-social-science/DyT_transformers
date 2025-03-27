@@ -63,7 +63,7 @@ class DyTTransformer(nn.Module):
 
 # Dummy Dataset for Testing
 class DummyDataset(Dataset):
-    def __init__(self, size=10, seq_len=20, d_model=512): #调试时控制size在10以内
+    def __init__(self, size=50, seq_len=20, d_model=512): #调试时控制size在10左右
         self.size = size
         self.seq_len = seq_len
         self.data = torch.randn(size, seq_len, d_model)
@@ -161,7 +161,7 @@ def plot_training_time_comparison(epochs, vanilla_times, dyt_times, ax=None):
     ax.tick_params(axis='both', which='major', labelsize=10)
     
     # Add subplot label aligned with title
-    ax.text(-0.1,1.0, 'A', transform=ax.transAxes, fontsize=15, 
+    ax.text(-0.08, 1.05, 'A', transform=ax.transAxes, fontsize=15, 
             fontweight='bold', va='center', ha='right')
 
 def plot_inference_time_comparison(vanilla_inference_time, dyt_inference_time, ax=None):
@@ -191,7 +191,7 @@ def plot_inference_time_comparison(vanilla_inference_time, dyt_inference_time, a
     # Set y-axis limit to avoid overlap
     ax.set_ylim(0, max(norm_times) * 1.2)    
     # Add subplot label aligned with title
-    ax.text(-0.1,1.0, 'B', transform=ax.transAxes, fontsize=15, 
+    ax.text(-0.08, 1.05, 'B', transform=ax.transAxes, fontsize=15, 
             fontweight='bold', va='center', ha='right')
 
 def plot_loss_comparison(epochs, vanilla_losses, dyt_losses, ax=None):
@@ -209,7 +209,7 @@ def plot_loss_comparison(epochs, vanilla_losses, dyt_losses, ax=None):
     ax.grid(True, linestyle='--', alpha=0.7)
     ax.tick_params(axis='both', which='major', labelsize=10)    
     # Add subplot label aligned with title
-    ax.text(-0.1, 1.0, 'C', transform=ax.transAxes, fontsize=15, 
+    ax.text(-0.08, 1.05, 'C', transform=ax.transAxes, fontsize=15, 
             fontweight='bold', va='center', ha='right')
 
 def plot_parameter_comparison(vanilla_params, dyt_params, ax=None):
@@ -245,7 +245,7 @@ def plot_parameter_comparison(vanilla_params, dyt_params, ax=None):
     # Set y-axis limit to avoid overlap
     ax.set_ylim(0, max(params_in_millions) * 1.15)    
     # Add subplot label aligned with title
-    ax.text(-0.1, 1.0, 'D', transform=ax.transAxes, fontsize=15, 
+    ax.text(-0.08, 1.05, 'D', transform=ax.transAxes, fontsize=15, 
             fontweight='bold', va='center', ha='right')
 
 def plot_activation_distribution(activation_samples, act_mean, act_std, act_min, act_max, ax=None):
@@ -295,7 +295,7 @@ def plot_activation_distribution(activation_samples, act_mean, act_std, act_min,
              bbox_to_anchor=(0.98, 0.98), 
              facecolor='white', edgecolor='gray', framealpha=0.8)    
     # Add subplot label aligned with title
-    ax.text(-0.1, 1.0, 'E', transform=ax.transAxes, fontsize=15, 
+    ax.text(-0.08, 1.05, 'E', transform=ax.transAxes, fontsize=15, 
             fontweight='bold', va='center', ha='right')
 
 def plot_activation_function_comparison(alpha_value, ax=None):
@@ -335,7 +335,7 @@ def plot_activation_function_comparison(alpha_value, ax=None):
              bbox_to_anchor=(0.98, 0.02),
              facecolor='white', edgecolor='gray', framealpha=0.8)    
     # Add subplot label
-    ax.text(-0.1, 1.0, 'F', transform=ax.transAxes, fontsize=15, 
+    ax.text(-0.08, 1.05, 'F', transform=ax.transAxes, fontsize=15, 
             fontweight='bold', va='center', ha='right')
 
 def save_plots(formats=None):
